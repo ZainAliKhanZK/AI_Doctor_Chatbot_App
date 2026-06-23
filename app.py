@@ -1,11 +1,7 @@
-import os
 import streamlit as st
-from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv()
-
-api_key = os.getenv("HF")
+api_key = st.secrets["HF"]
 
 st.set_page_config(
     page_title="AI Health Assistant",
